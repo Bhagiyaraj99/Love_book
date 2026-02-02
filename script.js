@@ -56,6 +56,9 @@ const modalText = document.getElementById("modalText");
 const closeModal = document.getElementById("closeModal");
 const surpriseBtn = document.getElementById("surpriseBtn");
 
+const frontPeekBtn = document.getElementById("frontPeekBtn");
+if (frontPeekBtn) frontPeekBtn.addEventListener("click", openBook);
+
 // Open modal
 surpriseBtn.addEventListener("click", () => {
   const pick = notes[Math.floor(Math.random() * notes.length)];
@@ -157,3 +160,4 @@ closeModal.addEventListener("click", () => modal.classList.add("hidden"));
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.classList.add("hidden");
 });
+
