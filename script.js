@@ -161,3 +161,68 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.classList.add("hidden");
 });
 
+// ===== Valentine buttons =====
+const valYes = document.getElementById("valYes");
+const valNo = document.getElementById("valNo");
+
+function clamp(n, min, max) { return Math.max(min, Math.min(max, n)); }
+
+// Move the "No" button to a random safe spot
+function teleportNoButton() {
+  if (!valNo) return;
+
+  const pad = 12;
+  const btnW = valNo.offsetWidth || 110;
+  const btnH = valNo.offsetHeight || 44;
+
+  const maxX = window.innerWidth - btnW - pad;
+  const maxY = window.innerHeight - btnH - pad;
+
+  const x = Math.random() * (maxX - pad) + pad;
+  const y = Math.random() * (maxY - pad) + pad;
+
+  valNo.style.position = "fixed";
+  valNo.style.left = `${x}px`;
+  valNo.style.top = `${y}px`;
+  valNo.style.zIndex = 9999;
+}
+
+// Make "No" impossible to click
+if (valNo) {
+  valNo.addEventListener("click", (e) => {
+    e.preventDefault();
+    teleportNoButton();
+  });
+
+  // Desktop: dodge the mouse
+  valNo.addEventListener("mouseenter", teleportNoButton);
+
+  // Mobile: dodge the finger before a tap lands
+  valNo.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    teleportNoButton();
+  }, { passive: false });
+}
+
+// When YES is clicked: show a sweet surprise and open the book
+if (valYes) {
+  valYes.addEventListener("click", () => {
+    // reuse your existing modal if you have it
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modalText");
+
+    if (modal && modalText) {
+      modalText.textContent = "YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘";
+      modal.classList.remove("hidden");
+    }
+
+    // Open the book if openBook() exists in your script
+    if (typeof openBook === "function") openBook();
+  });
+}
+
+// Optional: start with No somewhere fun after page loads
+window.addEventListener("load", () => {
+  teleportNoButton();
+});
+
