@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Floating background hearts -->
+  <div class="bg-hearts" aria-hidden="true"></div>
+
+  <!-- FRONT PAGE -->
+  <main class="screen screen-front" id="frontScreen">
+    <div class="card">
+      <div class="badge">Manny’s VIP area ✨ (no entry without smiles)</div>
+<h1>Hey Manny 💖</h1>
+<p class="subtitle">
+  I made you a tiny love-book full of <b>us</b> — cute moments, funny memories,
+  and proof that you’re my favorite distraction 😌💕<br/>
+  Tap the heart to unlock the magic.
+</p>
+
+
+      <button class="heart-btn" id="openBtn" aria-label="Open Heart">
+        <span class="heart">💗</span>
+        <span class="btn-text">Open Heart</span>
+      </button>
+
+      <p class="hint">Warning: may cause smiling, blushing, and missing me 😄✨</p>
+    </div>
+  </main>
+
+  <!-- BOOK PAGE -->
+  <main class="screen screen-book hidden" id="bookScreen">
+    <header class="topbar">
+      <button class="ghost" id="backBtn">← Back</button>
+      <div class="title">Our Little Book</div>
+      <button class="ghost" id="surpriseBtn">✨ Surprise</button>
+    </header>
+
+    <section class="book-wrap">
+      <div class="book" id="book">
+        <!-- Left page -->
+        <div class="page page-left" id="leftPage">
+          <div class="page-inner">
+            <div class="photo-frame">
+              <img id="leftImg" alt="Memory photo left"/>
+            </div>
+            <p class="caption" id="leftCap"></p>
+          </div>
+        </div>
+
+        <!-- Right page -->
+        <div class="page page-right" id="rightPage">
+          <div class="page-inner">
+            <div class="photo-frame">
+              <img id="rightImg" alt="Memory photo right"/>
+            </div>
+            <p class="caption" id="rightCap"></p>
+          </div>
+        </div>
+
+        <!-- Book spine shine -->
+        <div class="spine" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <button class="pill" id="prevBtn">⬅ Prev</button>
+      <div class="page-indicator" id="pageIndicator">1 / 1</div>
+      <button class="pill" id="nextBtn">Next ➡</button>
+    </footer>
+  </main>
+
+  <!-- Tiny modal -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-card">
+      <h2>💌 A note</h2>
+      <p id="modalText"></p>
+      <button class="pill" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
