@@ -11,24 +11,85 @@
   <div class="bg-hearts" aria-hidden="true"></div>
 
   <!-- FRONT PAGE -->
-  <main class="screen screen-front" id="frontScreen">
-    <div class="card">
-      <div class="badge">Manny’s VIP area ✨ (no entry without smiles)</div>
-<h1>Hey Manny 💖</h1>
-<p class="subtitle">
-  I made you a tiny love-book full of <b>us</b> காதல் 😌💕<br/>
-  Tap the heart to unlock the magic.
-</p>
+<main class="screen screen-front v2" id="frontScreen">
+  <div class="hero">
+    <!-- Left: headline -->
+    <section class="hero-left">
+      <div class="chip">
+        <span class="dot"></span>
+        Manny’s Love Portal
+      </div>
 
+      <h1 class="hero-title">
+        A tiny website<br/>
+        with a <span class="glow">big</span> heart 💖
+      </h1>
 
-      <button class="heart-btn" id="openBtn" aria-label="Open Heart">
-        <span class="heart">💗</span>
-        <span class="btn-text">Open Heart</span>
-      </button>
+      <p class="hero-subtitle">
+        Cute moments, inside jokes, and our memories — packed into a little book.
+        Built for <b>Manny</b>. Powered by <b>love + chaos</b>.
+      </p>
 
-      <p class="hint">Warning: may cause smiling, blushing, and missing me 😄✨</p>
-    </div>
-  </main>
+      <div class="cta-row">
+        <button class="cta-heart" id="openBtn" aria-label="Open Heart">
+          <span class="cta-icon">💗</span>
+          <span class="cta-text">
+            <span class="cta-top">Open Heart</span>
+            <span class="cta-bottom">Tap to enter the book</span>
+          </span>
+        </button>
+
+        <button class="cta-ghost" id="frontPeekBtn" type="button">
+          Quick peek ✨
+        </button>
+      </div>
+
+      <p class="micro">
+        Tip: best experienced on phone + headphones (optional) 🎧
+      </p>
+    </section>
+
+    <!-- Right: fancy preview card -->
+    <section class="hero-right">
+      <div class="preview">
+        <div class="preview-top">
+          <div class="mini-title">Live Preview</div>
+          <div class="mini-badges">
+            <span class="mini-pill">Modern</span>
+            <span class="mini-pill">Cute</span>
+            <span class="mini-pill">Manny-coded</span>
+          </div>
+        </div>
+
+        <div class="preview-body">
+          <div class="mock-heart" aria-hidden="true">💞</div>
+          <div class="mock-lines">
+            <div class="line w90"></div>
+            <div class="line w75"></div>
+            <div class="line w60"></div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-photo"></div>
+            <div class="mock-caption">“Our story starts here.”</div>
+          </div>
+        </div>
+
+        <div class="preview-bottom">
+          <span class="status">
+            <span class="pulse"></span> Ready to open
+          </span>
+          <span class="tiny">v1.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background decor -->
+    <div class="blob b1" aria-hidden="true"></div>
+    <div class="blob b2" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+  </div>
+</main>
+
 
   <!-- BOOK PAGE -->
   <main class="screen screen-book hidden" id="bookScreen">
@@ -84,4 +145,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
