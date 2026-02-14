@@ -202,22 +202,36 @@ function teleportNoButton() {
   }
 
   // YES works
-  if (valYes) {
-  valYes.addEventListener("click", () => {
-  const modal = document.getElementById("modal");
-  const modalText = document.getElementById("modalText");
-  const valBox = document.getElementById("valentine");
 
-  if (modal && modalText) {
-    modalText.textContent =
-      "YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘";
-    modal.classList.remove("hidden");
-  } else {
-    alert("YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘");
+  if (valYes) {
+    valYes.addEventListener("click", () => {
+      const modal = document.getElementById("modal");
+      const modalText = document.getElementById("modalText");
+      const valBox = document.getElementById("valentine");
+
+      if (modal && modalText) {
+        modalText.textContent =
+          "YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘";
+        modal.classList.remove("hidden");
+      } else {
+        alert("YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘");
+      }
+
+      if (valBox) valBox.style.display = "none";
+    });
   }
 
-  if (valBox) valBox.style.display = "none";
+  // NO button (still runs away)
+  if (valNo) {
+    valNo.addEventListener("mouseenter", teleportNoButton);
+    valNo.addEventListener("click", (e) => {
+      e.preventDefault();
+      teleportNoButton();
+    });
+  }
 });
+
+
 
 
 
