@@ -2,35 +2,36 @@
 // If you have an odd number of images, the last right page will show a placeholder.
 const pages = [
   {
-    left:  { img: "photos/1.jpg", cap: "Manny, you’re my favorite person… and my favorite problem 😌💗" },
-    right: { img: "photos/2.jpg", cap: "If cuteness was a job, you’d be the CEO (and I’d apply daily)." }
+    left:  { img: "photos/1.jpg", cap: "Somewhere along the way, you became my favorite part of the day." },
+    right: { img: "photos/2.jpg", cap: "With you, everything just feels easy." }
   },
   {
-    left:  { img: "photos/3.jpg", cap: "This is my “I’m lucky” face. Also my “don’t leave” face 😄" },
-    right: { img: "photos/4.jpg", cap: "Us together = 10/10. No feedback needed. Approved ✅" }
+    left:  { img: "photos/3.jpg", cap: "I love how we can be serious and silly in the same minute." },
+    right: { img: "photos/4.jpg", cap: "You make normal days feel special." }
   },
   {
-    left:  { img: "photos/5.jpg", cap: "You + me + food + laughs = my kind of perfect plan 😋💞" },
-    right: { img: "photos/6.jpg", cap: "Reminder: you’re stuck with me. (Respectfully.) 😌💘" }
+    left:  { img: "photos/5.jpg", cap: "You understand me in ways I don’t always explain." },
+    right: { img: "photos/6.jpg", cap: "It’s the small moments with you that matter most." }
   },
   {
-    left:  { img: "photos/7.jpg", cap: "I love you more than I love sleeping… and that’s serious." },
-    right: { img: "photos/8.jpg", cap: "You make my heart do backflips. My brain? Completely offline 🥹💗" }
+    left:  { img: "photos/7.jpg", cap: "I admire your strength more than you know." },
+    right: { img: "photos/8.jpg", cap: "You bring peace into my chaos." }
   },
   {
-    left:  { img: "photos/9.jpg", cap: "Every time I’m with you, Manny, life gets softer and happier." },
-    right: { img: "photos/10.jpg", cap: "Forever is a long time… good thing I like you A LOT 😄💕" }
+    left:  { img: "photos/9.jpg", cap: "Life feels better when it’s with you." },
+    right: { img: "photos/10.jpg", cap: "I just know I want you in my future." }
   }
 ];
 
+
 const notes = [
-  "Manny, you’re my favorite notification 💌",
-  "I love you more than I love Wi-Fi… and you know that’s huge 😤💗",
-  "If I had 3 wishes, I’d use all 3 on more moments with you ✨",
-  "You’re my peace, my chaos, and my happiness — all in one cute package 😄💞",
-  "I’m proud of you. Also obsessed. Respectfully 😌💖",
-  "You + me = my best decision (don’t let it get to your head 😄)",
-  "If love was a class, I’d fail everything else just to sit next to you 🥹💗"
+  "I’m really grateful for you.",
+  "Thank you for being patient with me.",
+  "You make my life better in ways you probably don’t even notice.",
+  "I feel lucky to do life with you.",
+  "You matter to me. A lot.",
+  "I don’t always say it, but I appreciate you deeply.",
+  "You’re someone I genuinely respect — not just love."
 ];
 
 
@@ -230,6 +231,7 @@ function teleportNoButton() {
     });
   }
 });
+
 
 
 
