@@ -2,8 +2,8 @@
 // If you have an odd number of images, the last right page will show a placeholder.
 const pages = [
   {
-    left:  { img: "photos/1.jpg", cap: "Somewhere along the way, you became my favorite part of the day." },
-    right: { img: "photos/2.jpg", cap: "With you, everything just feels easy." }
+    left:  { img: "photos/1.jpg", cap: "Welcome to my tiny book chellame" },
+    right: { img: "photos/2.jpg", cap: "Enaku theriyum you are gonna like this right?" }
   },
   {
     left:  { img: "photos/3.jpg", cap: "I love how we can be serious and silly in the same minute." },
@@ -14,12 +14,12 @@ const pages = [
     right: { img: "photos/6.jpg", cap: "It’s the small moments with you that matter most." }
   },
   {
-    left:  { img: "photos/7.jpg", cap: "I admire your strength more than you know." },
-    right: { img: "photos/8.jpg", cap: "You bring peace into my chaos." }
+    left:  { img: "photos/7.jpg", cap: "Ennoda love ku sondhakaari" },
+    right: { img: "photos/8.jpg", cap: "And you are my sandakaari " }
   },
   {
-    left:  { img: "photos/9.jpg", cap: "Life feels better when it’s with you." },
-    right: { img: "photos/10.jpg", cap: "I just know I want you in my future." }
+    left:  { img: "photos/9.jpg", cap: "Wanna be yours always" },
+    right: { img: "photos/10.jpg", cap: "I LOVE YOU DII CHELLLAMEEE" }
   }
 ];
 
@@ -231,6 +231,7 @@ function teleportNoButton() {
     });
   }
 });
+
 
 
 
