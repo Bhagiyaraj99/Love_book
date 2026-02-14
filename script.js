@@ -203,25 +203,24 @@ function teleportNoButton() {
 
   // YES works
   if (valYes) {
-    valYes.addEventListener("click", () => {
-      // show modal message if modal exists
-      const modal = document.getElementById("modal");
-      const modalText = document.getElementById("modalText");
+  valYes.addEventListener("click", () => {
+  const modal = document.getElementById("modal");
+  const modalText = document.getElementById("modalText");
 
-      if (modal && modalText) {
-        modalText.textContent = "YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘";
-        modal.classList.remove("hidden");
-      } else {
-        alert("YAYYY 💖 Manny said YES! 😄💘");
-      }
+  if (modal && modalText) {
+    modalText.textContent =
+      "YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘";
+    modal.classList.remove("hidden");
+  } else {
+    alert("YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘");
+  }
+});
 
-      // open the book if the function exists
-      if (typeof openBook === "function") openBook();
-    });
   } else {
     console.log("valYes button not found. Check id='valYes' in index.html");
   }
 });
+
 
 
 
