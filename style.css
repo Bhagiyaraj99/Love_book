@@ -653,11 +653,14 @@ h1{
   cursor: not-allowed;
   user-select: none;
 }
+.val-actions { position: relative; }  /* already there, keep it */
+.val-no { position: absolute; left: 140px; top: 0; }  /* start visible */
 
 .val-hint{
   margin-top: 10px;
   color: #ffffffb7;
   font-size: 12px;
 }
+
 
 
