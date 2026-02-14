@@ -166,24 +166,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const valYes = document.getElementById("valYes");
   const valNo = document.getElementById("valNo");
 
-  function teleportNoButton() {
-    if (!valNo) return;
+function teleportNoButton() {
+  if (!valNo) return;
 
-    const pad = 12;
-    const btnW = valNo.offsetWidth || 110;
-    const btnH = valNo.offsetHeight || 44;
+  const actions = document.querySelector(".val-actions");
+  if (!actions) return;
 
-    const maxX = window.innerWidth - btnW - pad;
-    const maxY = window.innerHeight - btnH - pad;
+  const pad = 8;
 
-    const x = Math.random() * (maxX - pad) + pad;
-    const y = Math.random() * (maxY - pad) + pad;
+  // Make sure it's positioned relative to the actions row (inside the card)
+  valNo.style.position = "absolute";
+  valNo.style.zIndex = "9999";
 
-    valNo.style.position = "fixed";
-    valNo.style.left = `${x}px`;
-    valNo.style.top = `${y}px`;
-    valNo.style.zIndex = 9999;
-  }
+  const box = actions.getBoundingClientRect();
+  const btnW = valNo.offsetWidth || 110;
+  const btnH = valNo.offsetHeight || 44;
+
+  const maxX = Math.max(pad, box.width - btnW - pad);
+  const maxY = Math.max(pad, box.height - btnH - pad);
+
+  const x = Math.random() * (maxX - pad) + pad;
+  const y = 0; // keep it aligned in the row (looks nicer)
+
+  valNo.style.left = `${x}px`;
+  valNo.style.top = `${y}px`;
+}
+
 
   // NO dodges
   if (valNo) {
@@ -214,5 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("valYes button not found. Check id='valYes' in index.html");
   }
 });
+
 
 
