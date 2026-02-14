@@ -662,5 +662,10 @@ h1{
   font-size: 12px;
 }
 
+/* Ensure Valentine card is above overlays and can be clicked */
+.valentine { z-index: 99999; pointer-events: auto; }
+.val-card { position: relative; z-index: 99999; pointer-events: auto; }
+.val-yes { position: relative; z-index: 100000; pointer-events: auto; }
+
 
 
