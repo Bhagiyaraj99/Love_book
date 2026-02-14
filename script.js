@@ -206,6 +206,7 @@ function teleportNoButton() {
   valYes.addEventListener("click", () => {
   const modal = document.getElementById("modal");
   const modalText = document.getElementById("modalText");
+  const valBox = document.getElementById("valentine");
 
   if (modal && modalText) {
     modalText.textContent =
@@ -214,12 +215,11 @@ function teleportNoButton() {
   } else {
     alert("YAYYY 💖 Manny said YES! Now you’re officially my Valentine 😄💘");
   }
+
+  if (valBox) valBox.style.display = "none";
 });
 
-  } else {
-    console.log("valYes button not found. Check id='valYes' in index.html");
-  }
-});
+
 
 
 
